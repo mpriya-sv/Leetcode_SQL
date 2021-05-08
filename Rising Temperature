@@ -1,0 +1,4 @@
+select w2.id
+from weather w1, weather w2
+where w2.recorddate = date_add(w1.recorddate, interval 1 day)
+and w1.temperature < w2.temperature
