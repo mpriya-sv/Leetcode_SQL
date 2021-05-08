@@ -1,0 +1,9 @@
+# Solution-1
+select product_id
+from products
+where low_fats = 'Y' and recyclable = 'Y'
+
+# Solution-2
+select case when low_fats = 'Y' and recyclable = 'Y' then product_id end as product_id
+from products
+where low_fats = 'Y' and recyclable = 'Y'
