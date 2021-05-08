@@ -1,0 +1,7 @@
+# Solution-1
+select round(coalesce(count(distinct requester_id,accepter_id)/count(distinct sender_id,send_to_id),0),2) as accept_rate
+from friendrequest, requestaccepted
+
+# Solution-2
+select round(ifnull(count(distinct requester_id,accepter_id)/count(distinct sender_id,send_to_id),0),2) as accept_rate
+from friendrequest, requestaccepted
