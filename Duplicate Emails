@@ -1,0 +1,10 @@
+# Solution-1
+select Email
+from person 
+group by email
+having count(email) > 1;
+
+# Solution-2
+select distinct a.email
+from person a, person b
+where a.email = b.email and a.id < b.id
