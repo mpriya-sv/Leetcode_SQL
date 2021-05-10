@@ -1,0 +1,6 @@
+select customer_number
+from (select customer_number, count(customer_number) as cust_count
+                         from orders 
+                         group by customer_number  
+                         order by cust_count desc
+                         limit 1) as abc
