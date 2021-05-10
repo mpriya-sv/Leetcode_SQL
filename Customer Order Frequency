@@ -1,0 +1,7 @@
+select customer_id, name from (select customer_id, name
+                              from customers natural join orders natural join product 
+                              where month(order_date) = 06 or month(order_date) = 07
+                              group by customer_id, month(order_date)
+                              having sum(quantity*price) >= 100) as abc
+group by customer_id
+having count(customer_id) >= 2
