@@ -1,3 +1,4 @@
-# Leetcode_SQL
+# Leetcode SQL
 
 Leetcode SQL Solutions
+
